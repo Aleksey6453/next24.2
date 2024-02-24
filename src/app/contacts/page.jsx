@@ -2,8 +2,8 @@ import React from 'react'
 
 const page = () => {
   return (
-    <div>
-      <h1>
+    <div className='wrapPage'>
+      <h1 className='title'>
         Contacts
       </h1>
     </div>
