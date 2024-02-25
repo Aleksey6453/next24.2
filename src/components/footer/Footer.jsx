@@ -1,9 +1,9 @@
+import Link from "next/link"
 const Footer = () => {
     return (
         <footer className="footer">
-            <h4>
-              Footer
-            </h4>
+            
+            <Link href='/derty' className='linkHeader'>Derty</Link>
         </footer>
     )
 }
