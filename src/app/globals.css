@@ -94,10 +94,10 @@ body {
     )
     rgb(var(--background-start-rgb));
 
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     min-height: 100vh;
-    justify-content: space-between;
+    justify-content: space-between; */
 }
 
 a {
@@ -115,6 +115,9 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  min-height: 100vh;
+  min-width: 100vw;
+  overflow-x: hidden;
 }
 
 .wrapPage {
@@ -163,11 +166,11 @@ a {
     font-weight: bolder;
     border: 3px solid black;
     color: black;
-    background-color: white;
+    background-color: rgb(32, 199, 82);
 }
 .btn:active {
   background-color: #1E1F1C;
-  border: 2px solid white;
+  border: 3px solid white;
   color: white;
   border-radius: 15px;
 }
@@ -194,7 +197,8 @@ a {
 .header{
   color: white;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
+  justify-content: space-around;
   align-items: center;
   box-sizing: border-box;
   padding: 20px;
@@ -267,3 +271,17 @@ a {
   animation:s7 0.5s infinite;
 }
 @keyframes s7 {to{transform: rotate(.5turn)}}
+
+.logo{
+ width: 70px;
+}
+
+.logo:hover{
+  opacity: .5;
+  transition: all 2s;
+}
+
+.logoWrap{
+  width: 100px;
+  box-sizing: border-box;
+}

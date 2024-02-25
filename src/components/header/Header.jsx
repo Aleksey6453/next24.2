@@ -1,7 +1,7 @@
 import Link from "next/link"
 
 const navItems = [
-    {id: 1, label: 'Home', href: '/'},
+    // {id: 1, label: 'Home', href: '/'},
     {id: 2, label: 'Blog', href: '/blog'},
     {id: 3, label: 'Contacts', href: '/contacts'},
     {id: 4, label: 'About', href: '/about'},
@@ -12,7 +12,12 @@ const navItems = [
 const Header = () => {
     return (
         <header className='header'>
-            {/* <Link href='/'>Logo</Link> */}
+            <div className="logoWrap">
+                <Link href='/'>
+                    <img src="/logo.png" alt="logo" className="logo"/>
+                </Link>
+            </div>
+           
             <nav>
                 {navItems.map((link)=> (
                         <Link key={link.id} href={link.href} className='linkHeader'>
@@ -20,6 +25,7 @@ const Header = () => {
                         </Link>
                 ))}
             </nav>
+            <button className="btn">Logout</button>
         </header>
     )
 }
