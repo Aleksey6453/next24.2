@@ -1,4 +1,6 @@
+'use client'
 import Link from "next/link"
+import Button from '../button/Button'
 
 const navItems = [
     // {id: 1, label: 'Home', href: '/'},
@@ -25,7 +27,7 @@ const Header = () => {
                         </Link>
                 ))}
             </nav>
-            <button className="btn">Logout</button>
+            <Button text='Logout' url='#'/>
         </header>
     )
 }
