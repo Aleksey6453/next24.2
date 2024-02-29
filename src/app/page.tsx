@@ -13,7 +13,7 @@ export default function Home() {
         This is page is home, 100%
       </p>
       <Button text='See our works' url='/portfolio'/>
-      <Image src={Hero} alt='Hero' className='image'/>
+      <Image src={Hero} alt='Hero' className='image img'/>
     </div>
   );
 }
