@@ -1,4 +1,7 @@
+import Button from "@/components/button/Button";
 import styles from "./page.module.css";
+import Image from 'next/image';
+import Hero from '../../public/1.jpg'
 
 export default function Home() {
   return (
@@ -9,6 +12,8 @@ export default function Home() {
       <p>
         This is page is home, 100%
       </p>
+      <Button text='See our works' url='/portfolio'/>
+      <Image src={Hero} alt='Hero' className='image'/>
     </div>
   );
 }
