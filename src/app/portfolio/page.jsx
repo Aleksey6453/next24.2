@@ -7,8 +7,14 @@ const page = () => {
       <h1 className='title'>
         Portfolio
       </h1>
-      <div className="imgItems">
-        <Link href='/portfolio/ilustrations' className='imgItem'>
+      <div className="items">
+        <Link href='/portfolio/ilustrations' className='item'>
+          <span className='title'>Ilustrations</span>
+        </Link>
+        <Link href='/portfolio/ilustrations' className='item'>
+          <span className='title'>Ilustrations</span>
+        </Link>
+        <Link href='/portfolio/ilustrations' className='item'>
           <span className='title'>Ilustrations</span>
         </Link>
       </div>
