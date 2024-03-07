@@ -1,5 +1,11 @@
 import React from 'react'
 
+
+export const metadata = {
+  title: 'Blog',
+  description: 'Blog page',
+}
+
 const page = () => {
   return (
     <div className='wrapPage'>

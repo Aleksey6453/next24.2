@@ -1,6 +1,11 @@
 import Button from '@/components/button/Button'
 import React from 'react'
 
+export const metadata = {
+  title: 'Contacts',
+  description: 'Contacts page',
+}
+
 const page = () => {
   return (
     <div className='wrapPage'>
