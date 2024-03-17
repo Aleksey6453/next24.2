@@ -404,15 +404,25 @@ a {
 }
 .toggle-label input[type=checkbox]+.back .label.off {
   color: #ed1c24;
-  
+  cursor: pointer;
 }
 .toggle-label input[type=checkbox]:checked+.back .label.off {
   color: #ddd;
-  
+  cursor: pointer;
 }
 
 .smallImg {
   height: 400px;
+}
+
+.sun {
+  background-color: white;
+  color: black;
+}
+
+.moon{
+  background-color: black;
+  color: white;
 }
 
 
