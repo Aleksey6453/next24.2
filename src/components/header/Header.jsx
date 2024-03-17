@@ -1,6 +1,7 @@
 // 'use client'
 import Link from "next/link"
 import Button from '../button/Button'
+import {DarkModelToggle} from '../DarkModelToggle/DarkModelToggle'
 
 const navItems = [
     // {id: 1, label: 'Home', href: '/'},
@@ -19,6 +20,8 @@ const Header = () => {
                     <img src="/logo.png" alt="logo" className="logo"/>
                 </Link>
             </div>
+
+            <DarkModelToggle />
            
             <nav>
                 {navItems.map((link)=> (
