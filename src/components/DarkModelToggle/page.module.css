@@ -1,0 +1,9 @@
+.dark{
+  color: lime;
+  background-color: black;
+}
+
+.light{
+    color: blueviolet;
+    background-color: lime;
+}

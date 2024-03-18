@@ -1,23 +1,22 @@
-// 'use client'
+'use client'
 
-// import { useState } from "react"
-// import { createContext } from "react"
+import { createContext, useContext, useState } from 'react';
 
-// export const ThemeContext = createContext()
+const ThemeContext = createContext();
 
-// export const ThemeProvider = ({children}) => {
-//     const [mode, setMode] = useState('moon')
-//     // const toggle = () => setMode(prev => prev === 'moon' ? 'sun' : 'moon')
-//     useEffect(() => {
-//         const savedTheme = localStorage.getItem('theme');
-//         if (savedTheme) {
-//           setTheme(savedTheme);
-//         }
-//       }, []);
+export const useTheme = () => useContext(ThemeContext);
 
-//     return(
-//         <ThemeContext.Provider value={{toggle, mode}}>
-//             <div className={`theme ${mode}`}>{children}</div>
-//         </ThemeContext.Provider>
-//     )
-// }
+export const ThemeProvider = ({ children }) => {
+  const [theme, setTheme] = useState('light'); 
+
+  const toggleTheme = () => {
+    setTheme(prevTheme => (prevTheme === 'light' ? 'dark' : 'light'));
+  };
+
+  return (
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+      {children}
+    </ThemeContext.Provider>
+  );
+};
+

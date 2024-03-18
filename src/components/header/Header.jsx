@@ -1,7 +1,8 @@
 // 'use client'
+import { ThemeProvider } from "@/context/ThemeContext"
 import Link from "next/link"
 import Button from '../button/Button'
-import {DarkModelToggle} from '../DarkModelToggle/DarkModelToggle'
+import {ThemeToggle} from '../DarkModelToggle/DarkModelToggle'
 
 const navItems = [
     // {id: 1, label: 'Home', href: '/'},
@@ -14,24 +15,27 @@ const navItems = [
 
 const Header = () => {
     return (
-        <header className='header'>
-            <div className="logoWrap">
-                <Link href='/'>
-                    <img src="/logo.png" alt="logo" className="logo"/>
-                </Link>
-            </div>
+        <ThemeProvider>
+             <header className='header'>
+                <div className="logoWrap">
+                    <Link href='/'>
+                        <img src="/logo.png" alt="logo" className="logo"/>
+                    </Link>
+                </div>
 
-            <DarkModelToggle />
-           
-            <nav>
-                {navItems.map((link)=> (
-                        <Link key={link.id} href={link.href} className='linkHeader'>
-                            {link.label}
-                        </Link>
-                ))}
-            </nav>
-            <Button text='Logout' url='#'/>
-        </header>
+                <ThemeToggle />
+            
+                <nav>
+                    {navItems.map((link)=> (
+                            <Link key={link.id} href={link.href} className='linkHeader'>
+                                {link.label}
+                            </Link>
+                    ))}
+                </nav>
+                <Button text='Logout' url='#'/>
+            </header>
+        </ThemeProvider>
+       
     )
 }
 

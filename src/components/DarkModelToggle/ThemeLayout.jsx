@@ -1,29 +1,14 @@
 'use client'
 
-import { useState, useEffect } from 'react';
+import { useTheme } from '../../context/ThemeContext';
+import styles from './page.module.css'; 
 
-const ThemeLayout = ({ children }) => {
-  const [theme, setTheme] = useState('sun'); // По умолчанию установим светлую тему
+const Layout = ({ children }) => {
+  const { theme } = useTheme();
 
-  useEffect(() => {
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-      setTheme(savedTheme);
-    }
-  }, []);
-
-  const toggleTheme = () => {
-    const newTheme = theme === 'sun' ? 'moon' : 'sun';
-    setTheme(newTheme);
-    localStorage.setItem('theme', newTheme);
-  };
-
-  return (
-    <div className={theme}>
-      <button onClick={toggleTheme}>Toggle Theme</button>
-      {children}
-    </div>
-  );
+  return <div className={`layout ${theme === 'dark' ? 'dark-theme' : 'light-theme'}`}>
+           {children}
+        </div>;
 };
 
-export {ThemeLayout};
+export default Layout;

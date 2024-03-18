@@ -4,7 +4,10 @@ import "./globals.css";
 import {Header} from '../components/header/Header'
 import {Footer} from '../components/footer/Footer'
 // import {ThemeProvider} from '../context/ThemeContext'
-import {ThemeLayout} from '../components/DarkModelToggle/ThemeLayout'
+import {ThemeProvider} from '../context/ThemeContext'
+import Layout from "@/components/DarkModelToggle/ThemeLayout";
+
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,16 +21,19 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en">
       <body className={inter.className}>
-        <ThemeLayout>
-          <div className="main">
-            <Header />
-            {children}
-            <Footer />
-          </div>
-        </ThemeLayout>
+        <ThemeProvider>
+          <Layout>
+            <div className="main">
+              <Header />
+              {children}
+              <Footer />
+            </div>
+          </Layout>
+        </ThemeProvider>
         
       </body>
     </html>

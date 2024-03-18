@@ -1,26 +1,11 @@
 'use client'
 
-import { ThemeContext } from '@/context/ThemeContext'
-import React, { useContext } from 'react'
-import { useState, useEffect } from 'react';
+import { useTheme } from '../../context/ThemeContext';
 
-const DarkModelToggle = () => {
-    // const mode = 'sun'
-    // const {toggle, mode} = useContext(ThemeContext)
-    const [theme, setTheme] = useState('sun'); // По умолчанию установим светлую тему
+const ThemeToggle = () => {
+  const { toggleTheme } = useTheme();
 
-    useEffect(() => {
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme) {
-        setTheme(savedTheme);
-        }
-    }, []);
-
-    const toggleTheme = () => {
-        const newTheme = theme === 'sun' ? 'moon' : 'sun';
-        setTheme(newTheme);
-        localStorage.setItem('theme', newTheme);
-    };
+//   return <button onClick={toggleTheme}>Toggle Theme</button>;
 
   return (
     <label className='toggle-label theme' onClick={toggleTheme}>
@@ -32,6 +17,18 @@ const DarkModelToggle = () => {
        </span>
    </label>
   )
-}
+};
 
-export  {DarkModelToggle}
+export {ThemeToggle};
+
+
+//   return (
+//     <label className='toggle-label theme' onClick={toggleTheme}>
+//         <input type='checkbox'/>
+//         <span className='back'>
+//            <span className='toggle'></span>
+//            <span className='label on'>SUN</span>
+//            <span className='label off'>MOON</span>  
+//        </span>
+//    </label>
+//   )

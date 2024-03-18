@@ -425,4 +425,14 @@ a {
   color: white;
 }
 
+.dark{
+  color: lime;
+  background-color: black;
+}
+
+.light{
+    color: blueviolet;
+    background-color: lime;
+}
+
 
