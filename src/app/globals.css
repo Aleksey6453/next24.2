@@ -128,8 +128,8 @@ a {
   align-items: center;
   padding: 20px;
   box-sizing: border-box;
-  color: black; 
-  background-color: white;  
+  /* color: black; 
+  background-color: white;   */
 }
 
 .title {
@@ -394,13 +394,14 @@ a {
   line-height: 50px;
   text-align: center;
   font-size: 15px;
+  cursor: pointer;
 }
 .toggle-label .label.on { left: 0px; }
 .toggle-label .label.off { right: 0px; }
 
 .toggle-label input[type=checkbox]:checked+.back .label.on {
   color: #fff;
-  
+  cursor: pointer;
 }
 .toggle-label input[type=checkbox]+.back .label.off {
   color: #ed1c24;
@@ -425,7 +426,7 @@ a {
   color: white;
 }
 
-.dark{
+/* .dark{
   color: lime;
   background-color: black;
 }
@@ -433,6 +434,18 @@ a {
 .light{
     color: blueviolet;
     background-color: lime;
+} */
+
+/* .dark-theme{
+  color: lime;
+  background-color: black;
 }
+
+.light-theme{
+    color: blueviolet;
+    background-color: lime;
+} */
+
+
 
 

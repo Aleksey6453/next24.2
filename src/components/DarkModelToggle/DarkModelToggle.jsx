@@ -8,8 +8,8 @@ const ThemeToggle = () => {
 //   return <button onClick={toggleTheme}>Toggle Theme</button>;
 
   return (
-    <label className='toggle-label theme' onClick={toggleTheme}>
-        <input type='checkbox'/>
+    <label className='toggle-label theme' >
+        <input type='checkbox' onClick={toggleTheme}/>
         <span className='back'>
            <span className='toggle'></span>
            <span className='label on'>SUN</span>
@@ -22,13 +22,4 @@ const ThemeToggle = () => {
 export {ThemeToggle};
 
 
-//   return (
-//     <label className='toggle-label theme' onClick={toggleTheme}>
-//         <input type='checkbox'/>
-//         <span className='back'>
-//            <span className='toggle'></span>
-//            <span className='label on'>SUN</span>
-//            <span className='label off'>MOON</span>  
-//        </span>
-//    </label>
-//   )
+

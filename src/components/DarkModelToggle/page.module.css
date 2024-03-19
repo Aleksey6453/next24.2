@@ -1,9 +1,9 @@
-.dark{
+.dark-theme{
   color: lime;
   background-color: black;
 }
 
-.light{
+.light-theme{
     color: blueviolet;
     background-color: lime;
 }

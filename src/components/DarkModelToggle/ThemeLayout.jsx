@@ -1,12 +1,13 @@
 'use client'
 
 import { useTheme } from '../../context/ThemeContext';
-import styles from './page.module.css'; 
+
 
 const Layout = ({ children }) => {
-  const { theme } = useTheme();
+  const { theme } = useTheme('sun');
 
-  return <div className={`layout ${theme === 'dark' ? 'dark-theme' : 'light-theme'}`}>
+
+  return <div className={`layout ${theme === 'sun' ? 'moon' : 'sun'}`}>
            {children}
         </div>;
 };

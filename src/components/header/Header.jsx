@@ -1,8 +1,10 @@
-// 'use client'
+ 'use client'
+
 import { ThemeProvider } from "@/context/ThemeContext"
 import Link from "next/link"
 import Button from '../button/Button'
 import {ThemeToggle} from '../DarkModelToggle/DarkModelToggle'
+import { useTheme } from "@/context/ThemeContext"
 
 const navItems = [
     // {id: 1, label: 'Home', href: '/'},
@@ -13,7 +15,17 @@ const navItems = [
     {id: 6, label: 'Portfolio', href: '/portfolio'},
 ]
 
+
+
+
 const Header = () => {
+
+    const { toggleTheme } = useTheme();
+
+    const handleToggleTheme = () => {
+    toggleTheme();
+    }
+
     return (
         <ThemeProvider>
              <header className='header'>
@@ -23,7 +35,17 @@ const Header = () => {
                     </Link>
                 </div>
 
-                <ThemeToggle />
+                <label className='toggle-label theme' >
+                        <input type='checkbox' onClick={toggleTheme}/>
+                        <span className='back'>
+                        <span className='toggle'></span>
+                        <span className='label on'>SUN</span>
+                        <span className='label off'>MOON</span>  
+                    </span>
+                </label>
+
+                {/* <ThemeToggle/> */}
+                {/* <button onClick={handleToggleTheme} className='btn'>fire</button> */}
             
                 <nav>
                     {navItems.map((link)=> (
