@@ -44,7 +44,7 @@ const Header = () => {
                     </span>
                 </label>
 
-                {/* <ThemeToggle/> */}
+                {/* <ThemeToggle /> */}
                 {/* <button onClick={handleToggleTheme} className='btn'>fire</button> */}
             
                 <nav>

@@ -128,8 +128,6 @@ a {
   align-items: center;
   padding: 20px;
   box-sizing: border-box;
-  /* color: black; 
-  background-color: white;   */
 }
 
 .title {
@@ -193,8 +191,7 @@ a {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding-top: 10px;
-  padding-bottom: 20px;
+  padding: 20px;
 }
 
 .header{
@@ -426,25 +423,7 @@ a {
   color: white;
 }
 
-/* .dark{
-  color: lime;
-  background-color: black;
-}
 
-.light{
-    color: blueviolet;
-    background-color: lime;
-} */
-
-/* .dark-theme{
-  color: lime;
-  background-color: black;
-}
-
-.light-theme{
-    color: blueviolet;
-    background-color: lime;
-} */
 
 
 

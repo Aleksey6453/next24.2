@@ -10,7 +10,7 @@ export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState('sun'); 
 
   const toggleTheme = () => {
-    setTheme(prevTheme => (prevTheme === 'sun' ? 'moon' : 'sun'));
+    setTheme(prevTheme => (prevTheme === 'moon' ? 'sun' : 'moon'));
   };
 
   return (

@@ -7,22 +7,40 @@ export const metadata = {
   description: 'Blog page',
 }
 
-const page = () => {
+async function getData() {
+  const res = await fetch('https://jsonplaceholder.typicode.com/posts')
+
+  if (!res.ok) {
+
+    throw new Error('Failed to fetch data')
+  }
+ 
+  return res.json()
+}
+
+const page = async () => {
+  const data = await getData()
+
   return (
     <div className='wrapPage'>
-      <h1 className='title'>
+       <h1 className='title'>
         Blog
       </h1>
-      <Link href='blog/test' key='1' className='gorizontal'>
-        <div>
-          <img src="/4.jpg" alt="img" width={400}/>
-        </div>
-        <div>
-          <h1>Title</h1>
-          <p>Body</p>
-        </div>
-      </Link>
-      <Link href='blog/test2' key='2' className='gorizontal'>
+
+      {data.map((item) => (
+        <Link href='blog/test' key={item.id} className='gorizontal'>
+          <div>
+            <img src="/4.jpg" alt="img" width={400} className='m-10'/>
+          </div>
+          <div>
+            <h1>{item.title}</h1>
+            <p>{item.body}</p>
+          </div>
+        </Link>
+      ) )}
+     
+     
+      {/* <Link href='blog/test2' key='2' className='gorizontal'>
         <div>
           <img src="/2.jpg" alt="img" width={400}/>
         </div>
@@ -30,7 +48,7 @@ const page = () => {
           <h1>Title</h1>
           <p>Body</p>
         </div>
-      </Link>
+      </Link> */}
     </div>
   )
 }
