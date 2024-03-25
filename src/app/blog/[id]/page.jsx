@@ -1,11 +1,28 @@
 import React from 'react'
 
-const BlogId = () => {
+async function getData(id) {
+  const res = await fetch('https://jsonplaceholder.typicode.com/posts', { cache: 'no-store' })
+
+  if (!res.ok) {
+
+    throw new Error('Failed to fetch data')
+  }
+ 
+  return res.json()
+}
+
+const BlogId = async({params}) => {
+
+  const data = await getData(params.id)
+
   return (
-    <div>
+    <div className='wrapPage'>
       <h1>
-        BlogId
+        {data.title}
       </h1>
+      <p>
+        {data.body}
+      </p>
     </div>
   )
 }
