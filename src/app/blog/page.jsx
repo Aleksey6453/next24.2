@@ -28,7 +28,7 @@ const page = async () => {
       </h1>
 
       {data.map((item) => (
-        <Link href='blog/test' key={item.id} className='gorizontal'>
+        <Link href={`/blog/${item.id}`} key={item.id} className='gorizontal'>
           <div>
             <img src="/4.jpg" alt="img" width={400} className='m-10'/>
           </div>
