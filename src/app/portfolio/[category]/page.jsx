@@ -1,6 +1,10 @@
 import Button from '@/components/button/Button'
 import React from 'react'
 
+const getDate = (cat) => {
+  
+}
+
 const page = ({params}) => {
   return (
     <div className='wrapPage'>
