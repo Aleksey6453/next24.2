@@ -1,5 +1,5 @@
 export const items = {
-    ilustations: [
+    ilustrations: [
         {
             id: 1,
             title: "Ilustations One",
@@ -21,39 +21,39 @@ export const items = {
     ],
     websites: [
         {
-            id: 1,
+            id: 4,
             title: "Websites One",
             decs: "Text about websites One",
             image: 'https://goloe.me/uploads/posts/2021-12/1639895058_9-goloe-me-p-erotika-kharuna-khana-siski-24.jpg'
         },
         {
-            id: 2,
+            id: 5,
             title: "Websites Two",
             decs: "Text about websites Two",
             image: 'https://goloe.me/uploads/posts/2021-12/thumbs/1639895057_10-goloe-me-p-erotika-kharuna-khana-siski-26.jpg'
         },
         {
-            id: 3,
+            id: 6,
             title: "Websites Three",
             decs: "Text about websites Three",
             image: 'https://goloe.me/uploads/posts/2021-12/thumbs/1639895043_14-goloe-me-p-erotika-kharuna-khana-siski-37.jpg'
         },
     ],
-    applications: [
+    aplications: [
         {
-            id: 1,
+            id: 7,
             title: "Applications One",
             decs: "Text about applications One",
             image: 'https://goloe.me/uploads/posts/2021-12/thumbs/1639895046_5-goloe-me-p-erotika-kharuna-khana-siski-12.jpg'
         },
         {
-            id: 2,
+            id: 8,
             title: "Applications Two",
             decs: "Text about applications Two",
             image: 'https://goloe.me/uploads/posts/2021-12/thumbs/1639895027_6-goloe-me-p-erotika-kharuna-khana-siski-13.jpg'
         },
         {
-            id: 3,
+            id: 9,
             title: "Applications Three",
             decs: "Text about applications Three",
             image: 'https://goloe.me/uploads/posts/2021-12/thumbs/1639895037_7-goloe-me-p-erotika-kharuna-khana-siski-14.jpg'
