@@ -8,7 +8,8 @@ export const metadata = {
 }
 
 async function getData() {
-  const res = await fetch('https://jsonplaceholder.typicode.com/posts', { cache: 'no-store' })
+  const res = await fetch('https://jsonplaceholder.typicode.com/posts',
+             { cache: 'no-store' })
 
   if (!res.ok) {
 
